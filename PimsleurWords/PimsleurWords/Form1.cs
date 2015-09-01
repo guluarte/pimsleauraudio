@@ -97,12 +97,7 @@ namespace PimsleurWords
         {
             string[] wavSeparators = Directory.GetFiles(@".\sounds_separators", "*.wav", SearchOption.TopDirectoryOnly);
 
-            string[] mp3files = Directory.GetFiles(@"./", "*.mp3", SearchOption.TopDirectoryOnly);
-
-            foreach (var mp3File in mp3files)
-            {
-                File.Delete(mp3File);
-            }
+            CleanDir();
 
             using (StreamReader sr = new StreamReader(txtSubtitleFileOriginal.Text))
             {
@@ -238,12 +233,26 @@ namespace PimsleurWords
 
             Concatenate("res.mp3", wavFiles);
 
+            CleanDir();
+
+            MessageBox.Show("Done");
+        }
+
+        private static void CleanDir()
+        {
+            string[] mp3files = Directory.GetFiles(@"./", "*.mp3", SearchOption.TopDirectoryOnly);
+
+            foreach (var mp3File in mp3files)
+            {
+                File.Delete(mp3File);
+            }
+
+            string[] wavFiles = Directory.GetFiles(@"./", "*.wav", SearchOption.TopDirectoryOnly);
+
             foreach (var wavFile in wavFiles)
             {
                 File.Delete(wavFile);
             }
-
-            MessageBox.Show("Done");
         }
 
         public static void Concatenate(string outputFile, IEnumerable<string> sourceFiles)

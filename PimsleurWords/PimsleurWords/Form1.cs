@@ -205,7 +205,8 @@ namespace PimsleurWords
             {
                 var cmd = string.Format(" -y -i {0} -f mp3 -ab 128 -ar 44100 -ac 2 {1}", sourceFile,
                     sourceFile.Replace(".wav", ".mp3"));
-                Process.Start("ffmpeg.exe", cmd);
+                var process = Process.Start("ffmpeg.exe", cmd);
+                process.WaitForExit();
             }
 
             var command = "/C copy /b /Y ";
@@ -218,7 +219,8 @@ namespace PimsleurWords
 
             command += " " + outputFile;
 
-            Process.Start("cmd.exe", command);
+            var processEnd = Process.Start("cmd.exe", command);
+            processEnd.WaitForExit();
 
         }
 

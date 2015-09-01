@@ -42,3 +42,16 @@ C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurW
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\space.wav
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\space_short.wav
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\ffmpeg.exe
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\ffmpeg.exe
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\146717__fins__button.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\146718__fins__button.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\146721__fins__menu-click.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\146722__fins__menu-click.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\148694__metwo99__beep.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\171495__fins__button.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\244450__milton__click-1.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\290442__littlerobotsoundfactory__mouth-09 (1).wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\48631__ohnoimdead__onid-button-snap4.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\53243__shukran__beep.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\space.wav
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\space_short.wav

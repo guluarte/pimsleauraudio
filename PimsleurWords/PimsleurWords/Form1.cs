@@ -95,7 +95,7 @@ namespace PimsleurWords
         private List<AudioFragment> fragments = new List<AudioFragment>(); 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-
+            string[] wavSeparators = Directory.GetFiles(@".\sounds_separators", "*.wav", SearchOption.TopDirectoryOnly);
 
             using (StreamReader sr = new StreamReader(txtSubtitleFileOriginal.Text))
             {
@@ -124,12 +124,13 @@ namespace PimsleurWords
             int j = 0;
             var voiceManager = new VoiceManager();
             var wavFiles = new List<string>();
+            var rand = new Random();
             for (int i = 0; i < fragments.Count + 5; i++)
             {
 
                 if (i < fragments.Count)
                 {
-
+                    wavFiles.Add(wavSeparators[rand.Next(wavSeparators.Length)]);
                     j++;
                     voiceManager.SetVoice(fragments[i].Voice2);
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
@@ -137,13 +138,18 @@ namespace PimsleurWords
 
                     voiceManager.SetVoice(fragments[i].Voice1);
                     j++;
+                    wavFiles.Add("space_short.wav");
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
                     voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D4")), (int)voiceRate1.Value);
+
+                    j++;
+                    wavFiles.Add("space.wav");
                 }
                 
                 int prev = i - 5;
                 if (prev > 0 && prev < fragments.Count)
                 {
+                    wavFiles.Add(wavSeparators[rand.Next(wavSeparators.Length)]);
                     j++;
                     voiceManager.SetVoice(fragments[prev].Voice2);
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
@@ -151,13 +157,18 @@ namespace PimsleurWords
 
                     voiceManager.SetVoice(fragments[prev].Voice1);
                     j++;
+                    wavFiles.Add("space_short.wav");
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
                     voiceManager.SpeakToWav(fragments[prev].TextTarget, string.Format("output_{0}.wav", j.ToString("D4")), (int)voiceRate1.Value);
+
+                    
+                    wavFiles.Add("space.wav");
                 }
 
                 prev = prev - 5;
                 if (prev > 0 && prev < fragments.Count)
                 {
+                    wavFiles.Add(wavSeparators[rand.Next(wavSeparators.Length)]);
                     j++;
                     voiceManager.SetVoice(fragments[prev].Voice2);
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
@@ -165,15 +176,19 @@ namespace PimsleurWords
 
                     voiceManager.SetVoice(fragments[prev].Voice1);
                     j++;
+                    wavFiles.Add("space_short.wav");
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D4")));
                     voiceManager.SpeakToWav(fragments[prev].TextTarget, string.Format("output_{0}.wav", j.ToString("D4")), (int)voiceRate1.Value);
+
+                    
+                    wavFiles.Add("space.wav");
                 }
 
                 Application.DoEvents();
 
             }
 
-            Concatenate("res.wav", wavFiles);
+            Concatenate("res.mp3", wavFiles);
 
             foreach (var wavFile in wavFiles)
             {
@@ -185,43 +200,25 @@ namespace PimsleurWords
 
         public static void Concatenate(string outputFile, IEnumerable<string> sourceFiles)
         {
-            byte[] buffer = new byte[1024];
-            WaveFileWriter waveFileWriter = null;
-
-            try
+            //convert all files to mp3
+            foreach (var sourceFile in sourceFiles)
             {
-                foreach (string sourceFile in sourceFiles)
-                {
-                    using (WaveFileReader reader = new WaveFileReader(sourceFile))
-                    {
-                        if (waveFileWriter == null)
-                        {
-                            // first time in create new Writer
-                            waveFileWriter = new WaveFileWriter(outputFile, reader.WaveFormat);
-                        }
-                        else
-                        {
-                            if (!reader.WaveFormat.Equals(waveFileWriter.WaveFormat))
-                            {
-                                throw new InvalidOperationException("Can't concatenate WAV Files that don't share the same format");
-                            }
-                        }
+                var cmd = string.Format(" -y -i {0} -f mp3 -ab 128 -ar 44100 -ac 2 {1}", sourceFile,
+                    sourceFile.Replace(".wav", ".mp3"));
+                Process.Start("ffmpeg.exe", cmd);
+            }
 
-                        int read;
-                        while ((read = reader.Read(buffer, 0, buffer.Length)) > 0)
-                        {
-                            waveFileWriter.WriteData(buffer, 0, read);
-                        }
-                    }
-                }
-            }
-            finally
+            var command = "/C copy /b /Y ";
+            foreach (var sourceFile in sourceFiles)
             {
-                if (waveFileWriter != null)
-                {
-                    waveFileWriter.Dispose();
-                }
+                command += sourceFile.Replace(".wav", ".mp3")+"+";
             }
+
+            command = command.Trim('+');
+
+            command += " " + outputFile;
+
+            Process.Start("cmd.exe", command);
 
         }
 

@@ -38,8 +38,6 @@ C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurW
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\48631__ohnoimdead__onid-button-snap4.wav
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\53243__shukran__beep.wav
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.csprojResolveAssemblyReference.cache
-C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\space.wav
-C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\space_short.wav
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\ffmpeg.exe
 C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\ffmpeg.exe
 C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\146717__fins__button.wav
@@ -54,3 +52,5 @@ C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWo
 C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\53243__shukran__beep.wav
 C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\space.wav
 C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\space_short.wav
+C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\space.wav
+C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\sounds_separators\space_short.wav

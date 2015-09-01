@@ -126,10 +126,10 @@
     <Content Include="sounds_separators\53243__shukran__beep.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="space.wav">
+    <Content Include="sounds_separators\space.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="space_short.wav">
+    <Content Include="sounds_separators\space_short.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

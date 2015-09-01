@@ -110,7 +110,7 @@ namespace PimsleurWords
 
                     string[] fields = Regex.Split(line, ",\"");
 
-                    if (fields[0].Split(' ').Length < 1)
+                    if (fields[0].Split(' ').Length < 2)
                     {
                         continue;
                     }

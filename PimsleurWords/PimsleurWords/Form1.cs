@@ -233,7 +233,7 @@ namespace PimsleurWords
 
             Concatenate("res.mp3", wavFiles);
 
-            CleanDir();
+            //CleanDir();
 
             MessageBox.Show("Done");
         }

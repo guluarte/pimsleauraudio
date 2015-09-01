@@ -152,7 +152,7 @@ namespace PimsleurWords
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
                     j++;
-                    voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D4")), (int)voiceRate1.Value);
+                    voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D6")), (int)voiceRate1.Value);
                     wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
                     j++;

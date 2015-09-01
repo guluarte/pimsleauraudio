@@ -97,6 +97,13 @@ namespace PimsleurWords
         {
             string[] wavSeparators = Directory.GetFiles(@".\sounds_separators", "*.wav", SearchOption.TopDirectoryOnly);
 
+            string[] mp3files = Directory.GetFiles(@"./", "*.mp3", SearchOption.TopDirectoryOnly);
+
+            foreach (var mp3File in mp3files)
+            {
+                File.Delete(mp3File);
+            }
+
             using (StreamReader sr = new StreamReader(txtSubtitleFileOriginal.Text))
             {
                 string line;

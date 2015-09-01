@@ -17,3 +17,14 @@ C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurW
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\PimsleurWords.pdb
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\NAudio.dll
 C:\Users\rguluarte\Documents\Visual Studio 2013\Projects\PimsleurWords\PimsleurWords\PimsleurWords\bin\Debug\NAudio.xml
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\PimsleurWords.exe.config
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.exe
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.pdb
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\PimsleurWords.exe
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\PimsleurWords.pdb
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\NAudio.dll
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\bin\Debug\NAudio.xml
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.csprojResolveAssemblyReference.cache
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.MainForm.resources
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.Properties.Resources.resources
+C:\Users\rodolfo\Documents\Visual Studio 2013\Projects\pimsleauraudio\PimsleurWords\PimsleurWords\obj\Debug\PimsleurWords.csproj.GenerateResource.Cache

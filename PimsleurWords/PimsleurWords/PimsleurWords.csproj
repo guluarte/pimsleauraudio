@@ -120,9 +120,6 @@
     <Content Include="sounds_separators\244450__milton__click-1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds_separators\290442__littlerobotsoundfactory__mouth-09 %281%29.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sounds_separators\48631__ohnoimdead__onid-button-snap4.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

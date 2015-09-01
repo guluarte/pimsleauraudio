@@ -173,13 +173,14 @@ namespace PimsleurWords
             File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
-            voiceManager.SetVoice(fragments[i].Voice2);
+            
             j++;
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+            voiceManager.SetVoice(fragments[i].Voice2);
             voiceManager.SpeakToWav(fragments[i].TextTrasnlated, string.Format("output_{0}.wav", j.ToString("D6")),
                 (int) voiceRate2.Value);
 
-            voiceManager.SetVoice(fragments[i].Voice1);
+           
 
             j++;
             File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
@@ -195,6 +196,7 @@ namespace PimsleurWords
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
             j++;
+            voiceManager.SetVoice(fragments[i].Voice1);
             voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D6")),
                 (int) voiceRate1.Value);
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
@@ -213,13 +215,14 @@ namespace PimsleurWords
             File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
-            voiceManager.SetVoice(fragments[i].Voice2);
+           
             j++;
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+            voiceManager.SetVoice(fragments[i].Voice1);
             voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D6")),
                 (int)voiceRate2.Value);
 
-            voiceManager.SetVoice(fragments[i].Voice1);
+            
 
             j++;
             File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
@@ -235,6 +238,7 @@ namespace PimsleurWords
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
             j++;
+            voiceManager.SetVoice(fragments[i].Voice2);
             voiceManager.SpeakToWav(fragments[i].TextTrasnlated, string.Format("output_{0}.wav", j.ToString("D6")),
                 (int)voiceRate1.Value);
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));

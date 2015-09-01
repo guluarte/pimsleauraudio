@@ -110,9 +110,14 @@ namespace PimsleurWords
 
                     string[] fields = Regex.Split(line, ",\"");
 
+                    if (fields[0].Split(' ').Length < 1)
+                    {
+                        continue;
+                    }
+
                     var fragment = new AudioFragment();
                     fragment.TextTarget = fields[0].Trim('"') + ".";
-                    fragment.TextTrasnlated = fields[1].Trim('"') + ". " + fields[2].Trim('"') + ".";
+                    fragment.TextTrasnlated = fields[1].Trim('"') + ".";
 
                     fragment.Voice1 = (VoiceItem)cbVoice.SelectedItem;
                     fragment.Voice2 = (VoiceItem)cbVoice2.SelectedItem;
@@ -136,13 +141,13 @@ namespace PimsleurWords
                 }
                 
                 int prev = i - 5;
-                if (prev > 0 && prev < fragments.Count)
+                if (prev >= 0 && prev < fragments.Count)
                 {
                     j = AddWavFile(j, wavSeparators, rand, wavFiles, voiceManager, prev);
                 }
 
                 prev = prev - 5;
-                if (prev > 0 && prev < fragments.Count)
+                if (prev >= 0 && prev < fragments.Count)
                 {
                     j = AddWavFile(j, wavSeparators, rand, wavFiles, voiceManager, prev);
                 }
@@ -192,6 +197,46 @@ namespace PimsleurWords
             j++;
             voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D6")),
                 (int) voiceRate1.Value);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+            j++;
+            File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+
+            // 2nd
+            j++;
+            File.Copy(wavSeparators[rand.Next(wavSeparators.Length)], string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+            j++;
+            File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+            voiceManager.SetVoice(fragments[i].Voice2);
+            j++;
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+            voiceManager.SpeakToWav(fragments[i].TextTarget, string.Format("output_{0}.wav", j.ToString("D6")),
+                (int)voiceRate2.Value);
+
+            voiceManager.SetVoice(fragments[i].Voice1);
+
+            j++;
+            File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+            j++;
+            File.Copy(wavSeparators[rand.Next(wavSeparators.Length)], string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+
+            j++;
+            File.Copy(".\\sounds_separators\\space_short.wav", string.Format("output_{0}.wav", j.ToString("D6")), true);
+            wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
+
+            j++;
+            voiceManager.SpeakToWav(fragments[i].TextTrasnlated, string.Format("output_{0}.wav", j.ToString("D6")),
+                (int)voiceRate1.Value);
             wavFiles.Add(string.Format("output_{0}.wav", j.ToString("D6")));
 
             j++;
